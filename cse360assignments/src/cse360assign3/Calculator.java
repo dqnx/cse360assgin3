@@ -15,15 +15,16 @@ package cse360assign3;
 	
 
 public class Calculator {
-
+	
+	//variable total declared
 	private int total;
 	
 	/** Constructor
-	 * 		initializes the value of total 
-	 * 		and sets total whenever it changes
+	 * 		initializes the value of total to 0
+	 * 		
 	 */
 	public Calculator () 
-	{		
+	{			
 		total = 0;  // not needed - included for clarity
 	}
 	
@@ -34,7 +35,7 @@ public class Calculator {
 	 */
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	/**Add the given parameter (value) to the total
@@ -44,7 +45,7 @@ public class Calculator {
 	 */
 	public void add (int value) 
 	{
-		
+		total = total + value;
 	}
 	
 	/**Subtract the total with the given parameter
@@ -54,7 +55,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) 
 	{
-		
+		total = total - value;
 	}
 	
 	/**Multiply the total with the given parameter
@@ -63,7 +64,7 @@ public class Calculator {
 	 */
 	public void multiply (int value)
 	{
-		
+		total = total * value;
 	}
 	
 	/**Divide the total with the given parameter
@@ -71,8 +72,16 @@ public class Calculator {
 	 * @param value		number to divide the total with
 	 */
 	public void divide (int value)
-	{
-		
+	{	
+		if(value == 0)
+		{
+			total = 0;
+		}
+		else
+		{
+			total = (total / value);
+		}		
+	
 	}
 
 	/**Return history of all actions
