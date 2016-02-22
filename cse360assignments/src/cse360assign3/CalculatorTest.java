@@ -138,7 +138,38 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		
-		fail("Not yet implemented");
+		Calculator test = new Calculator();
+		
+		test.add(6);
+		test.divide(2);
+		test.subtract(4);
+		test.multiply(5);
+		test.add(3);
+		
+		assertEquals("0 + 6 / 2 - 4 * 5 + 3", test.getHistory());
+		
+		//clear method wasn't created because it wasn't part of the requirement
+		//hence another constructor is created for testing purpose
+		
+		Calculator test2 = new Calculator();
+		
+		test2.add(4);
+		test2.subtract(2);
+		test2.multiply(2);
+		test2.add(5);
+		
+		assertEquals("0 + 4 - 2 * 2 + 5", test2.getHistory());
+		
+		Calculator test3 = new Calculator();
+	
+		test3.add(4);
+		test3.subtract(2);
+		test3.multiply(2);
+		test3.add(5);
+		test3.divide(0);
+		
+		assertEquals("0 + 4 - 2 * 2 + 5 / 0", test3.getHistory());
+		
 	}
 
 }
