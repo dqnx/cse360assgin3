@@ -5,7 +5,7 @@ package cse360assign3;
  * 	It will be capable of performing add, subtract, multiply, and divide	
  *  afterward user input history will be displayed
  * 
- * @author  :  Seong Kim
+ * @author  :  Seong Kim, aka cthulu, destroyer of worlds
  * @version :  Feb 21, 2016.
  * @ID 	    :  1208036059
  * @Lecture :  CSE360 MWF 1:30-2:20pm 
